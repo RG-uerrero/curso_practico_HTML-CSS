@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>Login</title>
+    <title>Email</title>
 
     <style>
         body {
@@ -46,14 +46,14 @@
             display: grid;
             grid-template-rows: auto 1fr auto;
             width: 400px;
-            height: 450px;
+            height: 500px;
+            justify-items: center;
         }
 
         .logo {
             width: 150px;
             margin: 48px;
             justify-self: center;
-            /* display: none; */
         }
 
         .title {
@@ -72,25 +72,32 @@
             text-align: center;
         }
 
-        .form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .label {
-            font-size: var(--sm);
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-
-        .input {
+        .email-image{
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
             background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 30px;
-            font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .email-image img{
+            width: 80px;
+        }
+
+        .resend{
+            font-size: var(--sm);
+        }
+
+        .resend span{
+            color: var(--very-light-pink);
+        }
+
+        .resend a{
+            text-decoration: none;
+            color: var(--hospital-green);
         }
 
         .primary-button {
@@ -107,7 +114,7 @@
 
         .login-button {
             margin-top: 14px;
-            margin-bottom: 30px;
+            margin-bottom: 14px;
         }
 
         @media (max-width:640px) {
@@ -120,7 +127,7 @@
             }
 
             .login {
-                height: 350px;
+                height: 380px;
             }
         }
     </style>
@@ -130,11 +137,16 @@
     <article class="login">
         <section class="form__container">
             <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for yopur account</p>
-            <img src="" alt="">
+            <h1 class="title">Email has been sent!</h1>
+            <p class="subtitle">Please chech your inbox for instructions on how to reset the password</p>
+            <div class="email-image">
+                <img src="./icons/email.svg" alt="email">
+            </div>
             <input type="button" value="Login" class="primary-button login-button">
-            <p></p>
+            <p class="resend">
+                <span>didn't receive the email?</span>
+                <a href="/">Resend</a>
+            </p>
         </section>
     </article>
 </body>
