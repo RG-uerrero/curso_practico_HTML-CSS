@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>Nueva Contraseña</title>
+    <title>Email</title>
 
     <style>
         body {
@@ -45,31 +45,15 @@
         .form__container {
             display: grid;
             grid-template-rows: auto 1fr auto;
-            width: 400px;
-            height: 450px;
+            width: 300px;
+            height: 500px;
+            justify-items: center;
         }
 
         .logo {
             width: 150px;
             margin: 48px;
             justify-self: center;
-            /* display: none; */
-        }
-
-        .title {
-            font-size: var(--lg);
-            margin: 12px;
-            text-align: center;
-        }
-
-        .subtitle {
-            height: 30px;
-            color: var(--very-light-pink);
-            font-size: var(--md);
-            font-weight: 300;
-            margin-top: 0;
-            margin: 15px;
-            text-align: center;
         }
 
         .form {
@@ -77,22 +61,33 @@
             flex-direction: column;
         }
 
-        .label{
+        .form a{
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 60px;
+        }
+        .label {
             font-size: var(--sm);
             font-weight: bold;
             margin-bottom: 4px;
         }
 
-        .input{
+        .input {
             background-color: var(--text-input-field);
             border: none;
             border-radius: 8px;
             height: 30px;
             font-size: var(--md);
-            padding: 6px; 
+            padding: 6px;
             margin-bottom: 12px;
         }
-        
+
+        .input-email{
+            margin-bottom: 22px;
+        }
+
         .primary-button {
             background-color: var(--hospital-green);
             border-radius: 8px;
@@ -105,21 +100,33 @@
             height: 50px;
         }
 
+        .secondary-button{
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+
         .login-button {
             margin-top: 14px;
             margin-bottom: 30px;
         }
-         
-        @media (max-width:640px){
-            .form__container{
+
+        @media (max-width:640px) {
+            .form__container {
                 height: 0;
             }
 
-            .logo{
+            .logo {
                 display: none;
             }
 
-            .login{
+            .login {
                 height: 350px;
             }
         }
@@ -130,15 +137,14 @@
     <article class="login">
         <section class="form__container">
             <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for yopur account</p>
-
             <form action="/" class="form">
-                <label for="password" class="label">Password</label>
-                <input type="password" id="password" placeholder="*********" class="input input__password">
+                <label for="email" class="label">Email address</label>
+                <input type="text" id="email" placeholder="platzi@example.cm" class="input input-email">
                 <label for="new-password" class="label">Repeat Password</label>
                 <input type="password" id="new-password" placeholder="*********" class="input input__password">
                 <input type="submit" value="confirm" class="primary-button login-button">
+                <a href="">Forgot my password</a>
+                <button class="secondary-button signup-button">Sign up</button>
             </form>
         </section>
     </article>
