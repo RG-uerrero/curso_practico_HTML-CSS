@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>Email</title>
-
+    <title>Create</title>
     <style>
         body {
             margin: 0;
@@ -45,32 +44,28 @@
         .form__container {
             display: grid;
             grid-template-rows: auto 1fr auto;
-            width: 280px;
-            height: 510px;
-            justify-items: center;
+            width: 400px;
+            height: 450px;
         }
 
-        .logo {
-            width: 150px;
-            margin: 48px;
-            justify-self: center;
+        .title {
+            font-size: var(--lg);
+            text-align: start;
+            margin-bottom: 30px;
         }
 
         .form {
-            width: 270px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .form section {
             display: flex;
             flex-direction: column;
         }
 
-        .form a{
-            color: var(--hospital-green);
-            font-size: var(--sm);
-            text-align: center;
-            text-decoration: none;
-            margin-bottom: 60px;
-        }
-
-        .label {
+        .form .label {
             font-size: var(--sm);
             font-weight: bold;
             margin-bottom: 4px;
@@ -86,7 +81,9 @@
             margin-bottom: 12px;
         }
 
-        .input-email{
+        .input-name,
+        .input-email,
+        .input-password {
             margin-bottom: 22px;
         }
 
@@ -102,23 +99,6 @@
             height: 50px;
         }
 
-        .secondary-button{
-            background-color: var(--white);
-            border-radius: 8px;
-            border: 1px solid var(--hospital-green);
-            color: var(--hospital-green);
-            width: 100%;
-            cursor: pointer;
-            font-size: var(--md);
-            font-weight: bold;
-            height: 50px;
-        }
-
-        .login-button {
-            margin-top: 14px;
-            margin-bottom: 30px;
-        }
-
         @media (max-width:640px) {
             .form__container {
                 height: 0;
@@ -129,8 +109,11 @@
             }
 
             .login {
-                width: 280px;
-                height: 380px;
+                height: 370px;
+            }
+
+            .form section {
+                margin-bottom: 15px;
             }
         }
     </style>
@@ -139,15 +122,20 @@
 <body>
     <article class="login">
         <section class="form__container">
-            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <h1 class="title">My account</h1>
+
             <form action="/" class="form">
-                <label for="email" class="label">Email address</label>
-                <input type="text" id="email" placeholder="platzi@example.cm" class="input input-email">
-                <label for="new-password" class="label">Password</label>
-                <input type="password" id="new-password" placeholder="*********" class="input input-password">
-                <input type="submit" value="confirm" class="primary-button login-button">
-                <a href="">Forgot my password</a>
-                <button class="secondary-button signup-button">Sign up</button>
+                <section>
+                    <label for="name" class="label">Name</label>
+                    <input type="text" id="name" placeholder="Camila Yokoo" class="input input-name">
+                    <label for="email" class="label">Email address</label>
+                    <input type="text" id="email" placeholder="platzi@example.com" class="input input-email">
+                    <label for="password" class="label">Password</label>
+                    <input type="password" id="password" placeholder="*********" class="input input__password">
+                </section>
+
+                <input type="submit" value="Create" class="primary-button login-button">
+
             </form>
         </section>
     </article>
