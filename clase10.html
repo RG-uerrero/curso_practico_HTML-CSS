@@ -37,7 +37,7 @@
 
         .my-order {
             width: 350px;
-            height: 540px;
+            height: 480px;
             background: var(--white);
             border-radius: 8px;
             padding: 20px;
@@ -65,9 +65,9 @@
             background-color: var(--text-input-field);
             align-items: center;
             gap: 16px;
-            margin-bottom: 24px;
+            margin-bottom: 12px;
             border-radius: 8px;
-            padding: 0 24px;
+            padding: 0 0 0 12px;
         }
 
         .order p:nth-child(1){
@@ -89,40 +89,13 @@
             font-weight: bold;
         }
 
-        .shopping-cart {
-            display: grid;
-            grid-template-columns: auto 1fr auto auto;
-            gap: 16px;
-            margin-bottom: 24px;
-            align-items: center;
-        }
-
-        .shopping-cart figure {
-            margin: 0;
-        }
-
-        .shopping-cart figure img {
-            width: 70px;
-            height: 70px;
-            border-radius: 20px;
-            object-fit: cover;
-        }
-
-        .shopping-cart p:nth-child(2) {
-            color: var(--very-light-pink);
-        }
-
-        .shopping-cart p:nth-child(3) {
-            font-size: var(--md);
-            font-weight: bold;
-        }
     </style>
 </head>
 
 <body>
     <article class="my-order">
         <section class="my-order-container">
-            <h1 class="title">My Order</h1>
+            <h1 class="title">My Orders</h1>
 
             <section class="my-order-content">
                 <section class="order">
@@ -131,41 +104,49 @@
                         <span>6 articles</span>
                     </p>
                     <p>$564.00</p>
-                </section>
-                <section class="shopping-cart">
-                    <figure>
-                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            alt="bike">
-                    </figure>
-                    <p>bike</p>
-                    <p>$30,00</p>
-                </section>
-                <section class="shopping-cart">
-                    <figure>
-                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            alt="bike">
-                    </figure>
-                    <p>bike</p>
-                    <p>$30,00</p>
-                </section>
-                <section class="shopping-cart">
-                    <figure>
-                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            alt="bike">
-                    </figure>
-                    <p>bike</p>
-                    <p>$30,00</p>
-                </section>
-                <section class="shopping-cart">
-                    <figure>
-                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            alt="bike">
-                    </figure>
-                    <p>bike</p>
-                    <p>$30,00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
                 </section>
             </section>
-
+            <section class="my-order-content">
+                <section class="order">
+                    <p>
+                        <span>03.25.21</span>
+                        <span>6 articles</span>
+                    </p>
+                    <p>$564.00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
+                </section>
+            </section>
+            <section class="my-order-content">
+                <section class="order">
+                    <p>
+                        <span>03.25.21</span>
+                        <span>6 articles</span>
+                    </p>
+                    <p>$564.00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
+                </section>
+            </section>
+            <section class="my-order-content">
+                <section class="order">
+                    <p>
+                        <span>03.25.21</span>
+                        <span>6 articles</span>
+                    </p>
+                    <p>$564.00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
+                </section>
+            </section>
+            <section class="my-order-content">
+                <section class="order">
+                    <p>
+                        <span>03.25.21</span>
+                        <span>6 articles</span>
+                    </p>
+                    <p>$564.00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
+                </section>
+            </section>
         </section>
     </article>
 </body>
