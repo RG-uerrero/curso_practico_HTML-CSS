@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const menuHamIcon = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
-const aside = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const cardsContainer = document.querySelector('.cards-container');
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
@@ -16,12 +16,11 @@ function toggleDesktopMenu() {
 
 function togglemobileMenu() {
   mobileMenu.classList.toggle('inactive');
-  aside.classList.add('inactive');
-
+  shoppingCartContainer.classList.add('inactive');
 }
 
 function toggleCarritoAside(){
-  aside.classList.toggle('inactive');
+  shoppingCartContainer.classList.toggle('inactive');
   mobileMenu.classList.add('inactive');
 }
 
@@ -31,11 +30,13 @@ productList.push ({
   price: 120,
   image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 });
+
 productList.push ({
   name: 'Pantalla',
   price: 320,
   image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 });
+
 productList.push ({
   name: 'Pc',
   price: 930,
